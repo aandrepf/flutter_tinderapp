@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tinder_app/components/button_icon.dart';
 
 class LoginWidget extends StatelessWidget {
   const LoginWidget({super.key});
@@ -52,75 +53,18 @@ class LoginWidget extends StatelessWidget {
                               style: GoogleFonts.montserrat(fontSize: 12),
                             ),
                           ),
-                          Container(
-                              width: double.infinity,
-                              margin: const EdgeInsets.only(bottom: 10),
-                              padding: const EdgeInsets.all(0.0),
-                              decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(30)),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white)),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  ListTile(
-                                    leading: const Icon(Icons.apple),
-                                    title: Center(
-                                      child: Text("SIGN IN WITH APPLE",
-                                          style: GoogleFonts.montserrat(
-                                              fontSize: 15)),
-                                    ),
-                                    trailing: const Text(""),
-                                  )
-                                ],
-                              )),
-                          Container(
-                              width: double.infinity,
-                              margin: const EdgeInsets.only(bottom: 10),
-                              padding: const EdgeInsets.all(0.0),
-                              decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(30)),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white)),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  ListTile(
-                                    leading: const Icon(Icons.facebook),
-                                    title: Center(
-                                      child: Text("SIGN IN WITH FACEBOOK",
-                                          style: GoogleFonts.montserrat(
-                                              fontSize: 15)),
-                                    ),
-                                    trailing: const Text(""),
-                                  )
-                                ],
-                              )),
-                          Container(
-                              width: double.infinity,
-                              margin: const EdgeInsets.only(bottom: 10),
-                              padding: const EdgeInsets.all(0.0),
-                              decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(30)),
-                                  border: Border.all(
-                                      width: 2, color: Colors.white)),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  ListTile(
-                                    leading: const Icon(Icons.chat_bubble),
-                                    title: Center(
-                                      child: Text("SIGN IN WITH PHONE NUMBER",
-                                          style: GoogleFonts.montserrat(
-                                              fontSize: 15)),
-                                    ),
-                                    trailing: const Text(""),
-                                  )
-                                ],
-                              )),
+                          const ButtonIconComponent(
+                              icon: Icons.apple,
+                              text: "SIGN IN WITH APPLE",
+                              color: 0xffffffff),
+                          const ButtonIconComponent(
+                              icon: Icons.facebook,
+                              text: "SIGN IN WITH FACEBOOK",
+                              color: 0xffffffff),
+                          const ButtonIconComponent(
+                              icon: Icons.chat_bubble,
+                              text: "SIGN IN WITH PHONE NUMBER",
+                              color: 0xffffffff),
                           Container(
                             margin: const EdgeInsets.only(top: 10, bottom: 20),
                             child: Text(
@@ -138,29 +82,3 @@ class LoginWidget extends StatelessWidget {
     );
   }
 }
-
-/* === USING GRADIENT TO BACKGROUND ===
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [Color(0xfffd267a), Color(0xffff6036)],
-            ),
-          ),
-
-
-
-
-          Container(
-          width: double.infinity,
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          color: const Color(0xfffd3a73),
-          child: Column(
-            children: const [
-              Positioned(
-                top: 20,
-                child: Text("TopColumn"),
-              )
-            ],
-          )),
-          */
